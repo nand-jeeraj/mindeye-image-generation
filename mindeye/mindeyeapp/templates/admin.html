@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindeye_Admin</title>
+    
+    <style>
+        .bg{
+     width: 101%;
+     padding: 10px;
+     min-height: 100vh;
+     height: fit-content;
+     background: rgb(9,196,235);
+     background: linear-gradient(90deg, rgba(9,196,235,1) 0%, rgba(159,69,214,1) 63%);;
+     border-radius: 3px;
+     
+ 
+ }
+ .mindeyebg
+ {
+   width: 101%;
+   height: 76px;
+   background: rgb(159,69,214);
+   background: linear-gradient(90deg, rgba(159,69,214,1) 22%, rgba(9,196,235,1) 99%);
+   border-radius: 3px;
+   margin-top: -9px;
+   margin-left: -9px;
+ }
+ .mindeye
+ {
+     height: 50px;
+     font-size: larger;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     font-weight: bolder;
+     color: white;
+     padding-left: 8px;
+     padding-top: 7px;
+ 
+ }
+ 
+
+.logout{
+        float:right;
+        margin:27px;
+        margin-right: 144px;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+
+    }
+    .tablestyle{
+    background-color: white;
+    font-family: arial, sans-serif;
+    width: 80vw;
+    margin-left: 125px;
+    margin-top: 70px;
+    color: black;
+    border-color: blanchedalmond;
+}
+.theadstyle{
+    font-family: monospace;
+    font-size: 23px;
+    height: 50px
+}
+.view_heading{
+    text-align: center  ;
+    color:white;
+    font-family: serif;
+    font-size: 60px;
+}
+ </style>
+</head>
+<body>
+    <div class="container">
+        <div class="mindeyebg">
+            <a  class= "logout" href="{% url 'home' %}">LOG OUT</a>
+            <div class="mindeye">
+                <h1 class="mindeye">MIND EYE_ADMIN</h1>
+            </div> <br> <br>
+                <div class="bg">
+                    <div>
+                        <h2 class="view_heading">USER PROMPT DETAILS</h2>
+                    </div>
+                    <table class="tablestyle"border="5" >
+                        <thead class="theadstyle">
+                            
+                            <th>USER NAME</th>
+                            <th>PROMPT</th>
+                            <th>IMAGE</th>
+                        </thead>
+                        <tbody>
+                            {% for item in data %}
+                            <tr align="center" >
+                                
+                                <td>{{ item.user }}</td>
+                                <td>{{ item.prompt }}</td>
+                                <td>
+                                    <img src="/media/{{ item.img }}"  width="50px" height="50px" alt="">
+                                </td>
+                            </tr>
+                            {% endfor %}
+
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

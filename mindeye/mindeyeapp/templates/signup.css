@@ -1,0 +1,126 @@
+.bg{
+    width: 100%;
+    height: 200%;
+    color: rgb(9,196,235);
+    color: linear-gradient(90deg, rgba(9,196,235,1) 0%, rgba(159,69,214,1) 63%);
+}
+.midbox
+{
+    width: 900px;
+    height: 900px;
+    background: rgb(159,69,214);
+background: linear-gradient(90deg, rgba(159,69,214,1) 22%, rgba(9,196,235,1) 99%);
+    margin-left: 300px;
+    margin-top: 100px;
+    border-radius: 20px;
+}
+.signuptext
+{   width: -1px;
+    height: 50px;
+    color:white;
+    font-family: serif;
+    margin-left: 340px;
+    margin-top: 80px;
+    padding-top: 40px;
+    font-size: 60px
+
+}
+.mindeye
+{
+    height: 50px;
+    color: white;
+    font-size: larger;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    padding-left: 8px;
+    padding-top: 2px;
+
+}
+.mindeyebg
+{
+  width: 101%;
+  height: 60px; 
+  background: rgb(9,196,235);
+background: linear-gradient(90deg, rgba(9,196,235,1) 0%, rgba(159,69,214,1) 63%);
+  border-radius: 3px;
+  margin-top: -9px;
+  margin-left: -9px;
+
+} 
+.nametext{
+    width: 90%;
+    height: 15px;
+    color: white;
+    font-weight: bold;
+    margin-left: 165px;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 95px;
+    
+}
+.emailtext
+{
+    width: 90%;
+    height: 15px;
+    color: white;
+    font-weight: bold;
+    margin-left: 165px;
+    padding-top: 78px;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.passtext{
+    width: 90%;
+    height: 1px;
+    font-weight: bold;
+    margin-left: 165px;
+    color: white;
+    margin-top: 76px;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.nameform{
+    width: 520px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 7px;
+    margin-left: 165px;
+
+}
+.emailform{ 
+    width: 520px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 7px;
+    margin-left: 165px;
+    
+}
+.passform
+{
+    width: 520px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 7px;
+    margin-left: 165px;
+    margin-top: 17px;
+   
+}
+.signupbar{
+    
+
+   font-weight: bolder;
+    background-color: black;
+    border-radius: 14px;
+    border-color: black;
+    height: 61px;
+    color: white;
+    padding-left: 97px;
+    padding-right: 104px;
+    padding-bottom: 20px;
+    padding-top: 21px;
+    margin-left: 318px;
+    margin-top: 90px;
+    font-family: initial;
+    font-size: large;
+
+}

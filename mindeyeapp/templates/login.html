@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mind eye</title>
+    <style>
+    .bg
+{
+    width:200%;
+    height: 200%;
+}
+.image
+{
+    width: 100%;
+    height: 200%;
+    
+}
+.midbox
+{
+    width: 900px;
+    height: 900px;
+    background: rgb(159,69,214);
+    background: linear-gradient(90deg, rgba(159,69,214,1) 22%, rgba(9,196,235,1) 99%);
+    margin-left: 300px;
+    margin-top: 100px;
+    border-radius: 20px;
+}
+
+.logintext
+{
+    width: 20px;
+    height: 50px;
+    color:white;
+    font-family: serif;
+    margin-left: 350px;
+    margin-top: 80px;
+    padding-top: 40px;
+    font-size: 60px
+
+}
+.mindeye
+{
+    height: 50px;
+    color: white;
+    font-size: larger;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    padding-left: 8px;
+    padding-top: 2px;
+
+}
+.mindeyebg
+{
+  width: 101%;
+  height: 60px; 
+  background: rgb(9,196,235);
+background: linear-gradient(90deg, rgba(9,196,235,1) 0%, rgba(159,69,214,1) 63%);
+  border-radius: 3px;
+  margin-top: -9px;
+  margin-left: -9px;
+
+}
+.top{
+    width: 50px;
+    height: 38px;
+    margin-left: -264px;
+    margin-top: 90px;
+}
+.emailtext {
+    width: 474%;
+    height: 15px;
+    color: white; 
+    font-weight: bold;
+    margin-left: 471px;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.passtext{
+    width: 419%;
+    height: 1px;
+    font-weight: bold;
+    margin-left: 472px;
+    color: white;
+    margin-top: 76px;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.emailform{ 
+    width: 485px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 7px;
+    margin-left: 469px;
+    
+}
+.passform {
+    width: 485px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 7px;
+    margin-left: 469px;
+    margin-top: 17px;
+   
+}
+.loginbar
+{
+    font-weight: bolder;
+    background-color: black;
+    border-radius: 14px;
+    border-color: black;
+    height: 61px;
+    width: 200px;
+    color: white;
+    padding: 20px 50px;
+    margin-left: 602px;
+    margin-top: 30px;
+    font-family: initial;
+    font-size: large;
+
+}
+.dont
+{
+    color: white;
+    margin-left: 305px;
+    width: 180px;
+    margin-top: 362px;
+    font-size: medium;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.signup
+{    
+    margin-top: -36px;
+    margin-left: 55px;
+    color: black;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.unsuccessfull{
+font-size: 25px;
+    color: black;
+    margin-left: 604px;
+    margin-bottom: 18px;
+    width: 436px;
+    font-weight: bold;
+    margin-top: 69px;
+}
+</style>
+</head>
+<body>
+{% block content %}
+    <div>
+      <div class="mindeyebg">
+        <div class="mindeye">
+          <h1 class="mindeye">MIND EYE</h1>
+        </div>
+      </div>
+
+      <div class="midbox">
+        <div>
+          <h1 class="logintext">LOGIN</h1>
+        </div>
+
+        <div class="top">
+          {% if messages %}
+          {% for message in messages %}
+          {% if message.tags ==  "error" %}
+           <div  class= "unsuccessfull" role="alert">{{message}}</div>
+          
+          {% endif %}
+          {% endfor%}
+          {% endif %}
+
+
+          <form method="post" action="{% url 'loginsubmit' %}">
+            {% csrf_token %}
+            
+            <div class="emailtext">Email</div>
+            <br>
+            <input type="email" placeholder=" Email" class="emailform"  name="email"/>
+
+            <div class="passtext">Password</div>
+            <br />
+            <input type="password" class="passform"  placeholder=" Password" name="password" />
+            <button type="submit" class="loginbar">LOG IN</button>
+          </form>
+          
+        </div>
+        <div>
+          <p class="dont">Don't have an account?</p>
+        </div>
+        <div style="margin-top: -37px; margin-left: 427px">
+          <a href="{% url 'signup' %}" class="signup">SIGN UP HERE!!!</a>
+        </div>
+    </div>
+{% endblock content %}
+  </body>
+</html>

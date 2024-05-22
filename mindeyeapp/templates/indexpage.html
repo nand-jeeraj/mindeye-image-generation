@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mindeye</title>
+<style>
+.bg{
+     width: 100%;
+     height: 1152%;
+     background: rgb(9,196,235);
+     background: linear-gradient(90deg, rgba(9,196,235,1) 0%, rgba(159,69,214,1) 63%);
+     border-radius: 3px;
+     
+ 
+ }
+ .mindeyebg
+ {
+   width: 101%;
+   height: 76px;
+   background: rgb(159,69,214);
+   background: linear-gradient(90deg, rgba(159,69,214,1) 22%, rgba(9,196,235,1) 99%);
+   border-radius: 3px;
+   margin-top: -9px;
+   margin-left: -9px;
+ }
+ .mindeye
+ {
+     height: 50px;
+     font-size: larger;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     font-weight: bolder;
+     color: white;
+     padding-left: 8px;
+     padding-top: 7px;
+ 
+ }
+ .middle{
+    color: white;
+    font-size: 135px;
+    margin-left: 90px;
+    margin-top: 18px;
+    padding-top: 199px;
+    padding-left: 250px;
+
+ }
+ .options{
+    float:right;
+    float: right;
+    margin-left: 19px;
+    padding-left: -13px;
+    padding-top: 29px;
+    padding-right: 221px;
+ }
+ .home{
+    margin:66px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+ }
+ .login{
+    margin:49px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+ }
+ .signup{
+    margin:68px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+
+ }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="mindeyebg">
+            <div class="options">
+                <!-- <p>{% url 'home' %}</p> -->
+                <a href="{% url 'home' %}" class="home">HOME</a>
+                <a href="{% url 'login' %}" class="login">LOGIN</a>
+                <a href="{% url 'signup' %}" class="signup">SIGN UP</a>
+            </div>
+            <div class="mindeye">
+                <div>
+                    <h1 class="mindeye">MINDEYE</h1>
+                    
+                </div>
+                
+            </div>
+
+          <br><br>
+          <div class="bg">
+            <h1 class="middle">M I N D E Y E</h1>
+
+
+          </div>
+        
+
+        </div>
+        
+    </div>
+</body>
+</html>
